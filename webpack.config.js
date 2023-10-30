@@ -1,8 +1,9 @@
 module.exports = {
-  entry: './src/index.js',
+  entry: { main: './src/index.js', app: '/src/app.js' },
   mode: 'development',
+  devtool: 'inline-source-map',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: __dirname + '/dist',
     clean: true,
   },
