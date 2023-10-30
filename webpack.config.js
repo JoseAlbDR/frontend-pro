@@ -1,8 +1,8 @@
 module.exports = {
   entry: {
-    home: './src/homePage.js',
-    teams: './src/teamsPage.js',
-    contact: './src/contactPage.js',
+    home: './src/homePage.ts',
+    teams: './src/teamsPage.ts',
+    contact: './src/contactPage.ts',
   },
   mode: 'development',
   devtool: 'inline-source-map',
@@ -17,6 +17,14 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.ts?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
 };
