@@ -1,5 +1,9 @@
 module.exports = {
-  entry: { main: './src/index.js', app: '/src/app.js' },
+  entry: {
+    home: './src/home.js',
+    teams: '/src/teams.js',
+    contact: '/src/contact.js',
+  },
   mode: 'development',
   devtool: 'inline-source-map',
   output: {
