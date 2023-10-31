@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   entry: {
     home: './src/homePage.ts',
@@ -8,7 +10,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     filename: '[name].bundle.js',
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname + '/dist'),
     clean: true,
   },
   module: {
