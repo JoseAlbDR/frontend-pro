@@ -3,23 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quidditch Games XV</title>
+    <title>Quidditch Games XV - Contact</title>
 
     <!-- SEO -->
-    <meta name="description" content="Quidditch Games XV - Official website" />
+    <meta name="description" content="Quidditch Games XV - Contact" />
     <meta name="author" content="KeepCoding" />
     <meta property="og:title" content="Quidditch Games XV" />
-    <meta
-      property="og:description"
-      content="Quidditch Games XV - Official website."
-    />
+    <meta property="og:description" content="Quidditch Games XV - Contact." />
     <meta
       property="og:image"
       content="https://keepcodingweb13.github.io/html-css-practica/images/social.png"
     />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="<%=require( '../img/favicon.ico' )%>"
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,7 +37,8 @@
         <div class="container nav-container">
           <div class="logo">
             <a href="/">
-              <img src="img/logo.png" alt="Quidditch Games XV" />
+              <img src="<%=require("../img/logo.png")%>" alt="Quidditch Games
+              XV" />
             </a>
           </div>
           <div class="hamburger-wrapper">
@@ -47,74 +49,30 @@
               <span class="line line3"></span>
             </div>
             <div class="menu-items">
-              <li><a href="/">Inicio</a></li>
-              <li><a href="/teams.html">Equipos</a></li>
-              <li><a href="/contact.html">Contacto</a></li>
+              <li><a href="./">Inicio</a></li>
+              <li><a href="./teams.html">Equipos</a></li>
+              <li><a href="./contact.html">Contacto</a></li>
             </div>
           </div>
         </div>
       </div>
     </nav>
+
     <!-- Main -->
     <main>
-      <section id="header">
-        <h1>Quidditch Champions XI</h1>
-      </section>
-
-      <section id="about" class="container inner">
-        <h2>Sobre los Juegos</h2>
-        <p>
-          La Copa Mundial de Quidditch se ha celebrado cada cuatro años desde
-          1473. La competencia se lleva a cabo entre los equipos de Quidditch
-          que representan a los países de todo el mundo.
-        </p>
-        <p>
-          El número de países participantes varía de torneo en torneo. Cualquier
-          país puede inscribir un equipo dentro de los doce meses posteriores a
-          la final anterior.
-        </p>
-      </section>
-
-      <section id="counter">
-        <div class="container">
-          <h4>Próxima edición</h4>
-          <div id="countdown">
-            <ul>
-              <li><span id="days"></span>dias</li>
-              <li><span id="hours"></span>horas</li>
-              <li><span id="minutes"></span>minutos</li>
-              <li><span id="seconds"></span>segundos</li>
-            </ul>
-          </div>
+      <div class="container">
+        <div class="error">
+          <h1>404</h1>
+          <img src="<%=require("../img/steps.png")%>" />
+          <p>Lo sentimos, la página que estás buscando no existe.</p>
+          <a href="/">Volver a la página de inicio</a>
         </div>
-      </section>
-
-      <section id="classification" class="container inner">
-        <h2>Clasificación</h2>
-        <p>
-          Se forman dieciséis grupos en los cuales se dividen los equipos. Cada
-          equipo juega contra todos los otros equipos en su grupo durante un
-          período de dos años. Durante la fase de grupos, existe un tope de
-          cuatro horas de juego para cada jugador para evitar el agotamiento.
-        </p>
-        <p>
-          Con motivo de que el juego termina después de cuatro horas de juego y
-          la Snitch no es atrapada, el resultado se decide según los goles. Una
-          victoria gana dos puntos. Además de estos dos puntos una victoria por
-          150 puntos gana cinco puntos, en 100 puntos un extra de tres puntos y
-          en 50 puntos un punto extra.
-        </p>
-        <p>
-          Si dos equipos están empatados en puntos, se separan por cualquier
-          equipo que capture la Snitch más a menudo, o más rápidamente durante
-          sus partidos. Los dieciséis equipos que han terminado en la cima de
-          los dieciséis grupos se clasifican para la Copa Mundial.
-        </p>
-      </section>
+      </div>
     </main>
     <!-- Footer -->
     <footer class="footer">
-      <img src="img/logo.png" alt="Harry Potter - Quidditch Games XV" />
+      <img src="<%=require("../img/logo.png")%>" alt="Harry Potter - Quidditch
+      Games XV" />
       <span
         >&copy; Keep Coding -&nbsp;
         <script>
@@ -161,8 +119,6 @@
         </a>
       </div>
     </footer>
-
-    <script src="dist/home.bundle.js"></script>
 
     <!-- Referencias                        -->
     <!-- https://harrypotter.fandom.com/    -->

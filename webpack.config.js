@@ -1,17 +1,22 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
     home: './src/homePage.ts',
     teams: './src/teamsPage.ts',
     contact: './src/contactPage.ts',
+    notFound: './src/notFoundPage.ts',
   },
   mode: 'development',
   devtool: 'inline-source-map',
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname + 'dist'),
+    filename: '[name].[chunkhash].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
     rules: [
@@ -24,9 +29,32 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|jpg|jpeg|gif|webp|ico)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/templates/index.html',
+      filename: 'index.html',
+      chunks: ['global', 'home'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/teams.html',
+      filename: 'teams.html',
+      chunks: ['global', 'teams'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/contact.html',
+      filename: 'contact.html',
+      chunks: ['global', 'contact'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/404.html',
+      filename: '404.html',
+      chunks: ['global', 'notFound'],
+    }),
+  ],
 };
