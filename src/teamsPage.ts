@@ -1,2 +1,2 @@
 import './teams';
-import './css/teams.css';
+import './styles/teams.scss';

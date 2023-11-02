@@ -1,2 +1,2 @@
 import './form';
-import './css/contact.css';
+import './styles/contact.scss';
