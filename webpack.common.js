@@ -1,8 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-console.log(`Variable de entorno NODE_ENV=${process.env.NODE_ENV}`);
-
 module.exports = {
   entry: {
     home: './src/homePage.ts',
@@ -10,12 +8,9 @@ module.exports = {
     contact: './src/contactPage.ts',
     notFound: './src/notFoundPage.ts',
   },
-  mode: 'development',
-  devtool: 'inline-source-map',
   output: {
     filename: '[name].[chunkhash].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: process.env.NODE_ENV === 'production',
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],

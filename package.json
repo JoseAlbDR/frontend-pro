@@ -4,9 +4,9 @@
   "description": "Proyecto del módulo de Frontend PRO del Bootcamp de Web de KeepCoding.",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
     "watch": "webpack --watch",
-    "dev": "cross-env NODE_ENV=development webpack serve --open"
+    "dev": "cross-env NODE_ENV=development webpack serve --open --config webpack.dev.js"
   },
   "keywords": [],
   "author": "",
