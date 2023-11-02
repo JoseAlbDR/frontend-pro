@@ -1,68 +1,70 @@
-div.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 3rem 0;
-
-  form {
-    width: 50%;
+div {
+  &.form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 3rem 0;
 
-    input {
-      width: 100%;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 0.2rem;
-    }
+    form {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
-    textarea {
-      width: 100%;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 0.2rem;
-    }
-
-    button {
-      width: 100%;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      margin-top: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 0.2rem;
-      background-color: $gold-color;
-      color: #4d3c3c;
-      font-weight: 600;
-      font-family: $body-font-family;
-      text-transform: uppercase;
-      font-size: 1.1rem;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #fff;
-        color: $gold-color;
+      input {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.2rem;
       }
-    }
 
-    span {
-      &.error {
-        color: rgb(163, 0, 0);
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.2rem;
+      }
+
+      button {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.2rem;
+        background-color: $gold-color;
+        color: #4d3c3c;
+        font-weight: 600;
         font-family: $body-font-family;
-        font-size: 0.8rem;
-        align-self: flex-start;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #fff;
+          color: $gold-color;
+        }
+      }
+
+      span {
+        &.error {
+          color: rgb(163, 0, 0);
+          font-family: $body-font-family;
+          font-size: 0.8rem;
+          align-self: flex-start;
+        }
       }
     }
-  }
 
-  label {
-    font-family: $header-font-family;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    label {
+      font-family: $header-font-family;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+    }
   }
 }
