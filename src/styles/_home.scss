@@ -1,12 +1,16 @@
 @use './variables' as var;
 
+%center {
+  display: flex;
+  justify-content: center;
+}
+
 section#counter {
   background-color: var.$bg-color-light;
   padding: 3rem 0;
   div {
-    display: flex;
+    @extend %center;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
@@ -19,8 +23,7 @@ section#counter {
   }
 
   ul {
-    display: flex;
-    justify-content: center;
+    @extend %center;
     width: 100%;
   }
 
